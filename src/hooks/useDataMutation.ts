@@ -4,7 +4,7 @@ import { SpermData } from "./interfaces/sperm-data";
 
 const postData = async (data: SpermData) => {
     try {
-        const response = await axios.post("http://localhost:8080/api/data", data);
+        const response = await axios.post("https://app-cz7upoyahq-uc.a.run.app/api/data", data);
         return response.data;
     } catch (error) {
         throw error;
