@@ -1,17 +1,19 @@
 .input-container {
+    flex-wrap: wrap;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    
-    width: 15vh;
-
-    padding: 1vh;
+    /* margin: auto; */
+    width: auto;
+    padding: 2vh;
+    /* background: #000; */
 }
 
 .input-container .label {
-    font-size: 18px;
-    margin-bottom: .5vh;
+    font-size: 16px;
+    /* margin-bottom: .5vh; */
+    padding: .5vh;
 }
 
 .box-response {
@@ -27,13 +29,22 @@
 
 .error {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
     font-style: italic;
     color: #ff0037;
 }
 
 .inputs Input{
-    width: 15vh;
-    margin-left: -10px;
+    width: 12vh;
+    /* margin-left: -10px; */
+    border-radius: 0.5vh;
+}
+
+.inputs {
+    width: 100vh;
+}
+
+.title-box {
+    padding: .2vh;
 }
