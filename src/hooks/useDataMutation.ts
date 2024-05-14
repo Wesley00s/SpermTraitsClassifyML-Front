@@ -6,7 +6,7 @@ const postData = async (data: SpermData) => {
     try {
         const dataToSend = { ...data };
 
-        const response = await axios.post("https://app-cz7upoyahq-uc.a.run.app/api/data", dataToSend);
+        const response = await axios.post("https://app-cz7upoyahq-uc.a.run.app/api/bulls", dataToSend);
         return response.data;
     } catch (error) {
         throw error;
