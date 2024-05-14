@@ -14,30 +14,14 @@ const App = () => {
 
   const onSubmit = async (data: any) => {
     try {
-      
-      const def_mai_percent: number = parseFloat(data.def_mai_percent);
-        const normais_percent: number = parseFloat(data.normais_percent);
 
-      let def_men_percent = 100;
-      def_men_percent -=  (def_mai_percent + normais_percent)
-
-      const def_mai = 200 * (def_mai_percent / 100);
-      const normais = 200 * (normais_percent / 100);
-      const def_men = 200 - (def_mai + normais);
-
-      const zptz_totais = data.zptz_106 * data.volume;
-
-      const dataToSend = { ...data,
-          def_men_percent: def_men_percent,
-          zptz_totais: zptz_totais,
-          def_men: def_men
-      };
+      const dataToSend = { ...data };
 
       setIsSending(true);
       const response = await mutate(dataToSend);
       
       if (response && response.message) {
-        setResponseMessage(response.message);
+        setResponseMessage(response.message + " Com o total de " + response.points + " pontos.");
       } else {
         setResponseMessage('Resposta recebida com sucesso.');
       }
@@ -54,7 +38,7 @@ const App = () => {
     <div className="container">
 
       <form onSubmit={handleSubmit(onSubmit)}>
-      <h1 className='title'>Avaliar aptidão reprodutiva de touros Guzerá</h1>
+      <h1 className='title'>Avaliar aptidão reprodutiva de touros Guzerá. Com classificação andrológica por pontos.</h1>
 
 
         <div className="inputs">

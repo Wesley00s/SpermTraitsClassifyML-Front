@@ -4,15 +4,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin: auto; */
     width: auto;
     padding: 2vh;
-    /* background: #000; */
 }
 
 .input-container .label {
     font-size: 16px;
-    /* margin-bottom: .5vh; */
     padding: .5vh;
 }
 
@@ -37,7 +34,6 @@
 
 .inputs Input{
     width: 12vh;
-    /* margin-left: -10px; */
     border-radius: 0.5vh;
 }
 
